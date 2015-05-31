@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+		<title>Unassuming Wiki</title>
+	</head>	
+	
+	<body>
+		<a href="/wiki" class="main-title">
+			Unassuming Wikisphere
+		</a>
+		
+		<div class="history-area">
+			<a class="history-link" href={{history_url}}>{{history}}</a> 
+		</div>
+		
+		<div class="login-area">
+			<a class="login-link" href={{login_url}}>{{login}}</a> | <a class="login-link" href={{signup_url}}>{{signup}}</a>
+		</div>
+		
+		
+		<div id="content">
+		{% block content %}
+		{% endblock %}
+		</div>
+		
+		{% if age %}
+		<div class="age"> Queried {{age}} seconds ago
+		</div>
+		{% endif %}
+		
+	</body>
+</html>
+	
